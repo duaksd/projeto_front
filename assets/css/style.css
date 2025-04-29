@@ -335,6 +335,73 @@ body {
   display: flex;
 }
 
+/*overlay busca*/
+
+.search-overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0c0c0c;
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  flex-direction: column;
+  animation: fadeIn 0.4s ease-in-out;
+  align-items: center;
+  z-index: 1000;
+}
+
+/*input*/
+.search-container {
+  width: 90%;
+  max-width: 600px;
+}
+
+.search-input {
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(120, 93, 240, 0.4);
+}
+
+.search-input::placeholder {
+  color: #bbb;
+}
+
+.close-btn {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--purple-color);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.close-btn:hover {
+  transform: rotate(90deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+to {
+  opacity: 1;
+  transform: scale(1);
+  }
+}
+
 /*BANNER*/
 
 .banner video {
